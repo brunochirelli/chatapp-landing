@@ -1,9 +1,6 @@
 import React from 'react';
-import { CssBaseline } from '@material-ui/core';
+import RootWrapper from './RootWrapper';
 
-export const wrapRootElement = ({ element }) => (
-  <>
-    <CssBaseline />
-    {element}
-  </>
+export const wrapPageElement = ({ element }) => (
+  <RootWrapper>{element}</RootWrapper>
 );
