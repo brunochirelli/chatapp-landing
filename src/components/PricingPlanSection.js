@@ -12,7 +12,13 @@ const Wrapper = styled(Container)``;
 
 const PricingPlanSection = () => (
     <Wrapper component={Section}>
-        <Typography variant="h2" component="h2" tabIndex={0} align="center">
+        <Typography
+            variant="h2"
+            component="h2"
+            tabIndex={0}
+            align="center"
+            paragraph
+        >
             Pricing Plan
         </Typography>
         <Typography align="center">
@@ -21,11 +27,11 @@ const PricingPlanSection = () => (
             account of the system.
         </Typography>
 
-        <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
+        <Grid container spacing={2} justify="center">
+            <Grid item xs={12} sm={6} md={4}>
                 <PricingCard
                     title="Personal"
-                    price="$18.35/month"
+                    price={18}
                     features={[
                         '80gb data storage',
                         'More than 1500+ friend include',
@@ -33,15 +39,16 @@ const PricingPlanSection = () => (
                         'Categories based friend list',
                     ]}
                     ctaText="Sign Up!"
+                    ctaLink="/"
                     secCtaText="Try 30 Days Free"
                     image={personalcart}
                 />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} sm={6} md={4}>
                 <PricingCard
-                    title="Personaaaaaaaaaaaaaaal"
-                    price="$18.35/month"
+                    title="Professional"
+                    price={35}
                     features={[
                         '80gb data storage',
                         'More than 1500+ friend include',
@@ -49,6 +56,7 @@ const PricingPlanSection = () => (
                         'Categories based friend list',
                     ]}
                     ctaText="Sign Up!"
+                    ctaLink="/"
                     secCtaText="Try 30 Days Free"
                     image={professionalcart}
                 />
