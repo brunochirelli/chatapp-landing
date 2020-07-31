@@ -8,6 +8,8 @@ import { Aside } from '../styles/components';
 import signupimage from '../images/signupimage.svg';
 
 const Wrapper = styled(Container)`
+    margin: 2rem auto;
+
     img {
         width: 100%;
 
