@@ -9,6 +9,8 @@ import { Aside } from '../styles/components';
 import invitefriend from '../images/invitefriend.svg';
 
 const Wrapper = styled(Container)`
+    margin: 2rem auto;
+
     img {
         width: 100%;
 
