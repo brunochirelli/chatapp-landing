@@ -17,11 +17,6 @@ import PricingPlanSection from '../components/PricingPlanSection';
 import InviteFriendAside from '../components/InviteFriendAside';
 
 const WrapperStyled = styled.div`
-    section,
-    aside {
-        margin: 2.5rem auto;
-    }
-
     .features-icon {
         margin: 1.5rem 0;
     }
