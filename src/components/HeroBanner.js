@@ -17,36 +17,38 @@ const Wrapper = styled(Section)`
 
 const HeroBanner = () => (
     <Wrapper>
-        <Container maxWidth="md">
-            <Typography
-                variant="h1"
-                className="intro-text"
-                component="h1"
-                align="center"
-                paragraph
-                tabIndex={0}
+        <>
+            <Container maxWidth="md">
+                <Typography
+                    variant="h1"
+                    className="intro-text"
+                    component="h1"
+                    align="center"
+                    paragraph
+                    tabIndex={0}
+                >
+                    Be together, whenever
+                </Typography>
+                <Typography variant="body1" align="center" component="p">
+                    I must explain to you how all this mistaken idea of
+                    denouncing pleasure and praising pain was born and I will
+                    give you a complete account.
+                </Typography>
+                <CtaButton>Try 30 Days Free</CtaButton>
+            </Container>
+            <Box
+                display="flex"
+                justifyContent="center"
+                marginY={10}
+                overflow="hidden"
             >
-                Be together, whenever
-            </Typography>
-            <Typography variant="body1" align="center" component="p">
-                I must explain to you how all this mistaken idea of denouncing
-                pleasure and praising pain was born and I will give you a
-                complete account.
-            </Typography>
-            <CtaButton>Try 30 Days Free</CtaButton>
-        </Container>
-        <Box
-            display="flex"
-            justifyContent="center"
-            marginY={10}
-            overflow="hidden"
-        >
-            <img
-                className="top-banner"
-                src={topbanner}
-                alt="Chating with friends"
-            />
-        </Box>
+                <img
+                    className="top-banner"
+                    src={topbanner}
+                    alt="Chating with friends"
+                />
+            </Box>
+        </>
     </Wrapper>
 );
 
