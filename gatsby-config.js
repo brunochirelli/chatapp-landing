@@ -1,4 +1,5 @@
 module.exports = {
+    pathPrefix: '/chatapp-landing',
     siteMetadata: {
         title: `Chatapp`,
         description: `Chatapp landing page with Gatsby.js for Bruno Chirelli's portfolio`,
