@@ -1,42 +1,59 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
 
-const Header = ({ siteTitle }) => (
-    <header
-        style={{
-            background: `rebeccapurple`,
-            marginBottom: `1.45rem`,
-        }}
-    >
-        <div
-            style={{
-                margin: `0 auto`,
-                maxWidth: 960,
-                padding: `1.45rem 1.0875rem`,
-            }}
-        >
-            <h1 style={{ margin: 0 }}>
-                <Link
-                    to="/"
-                    style={{
-                        color: `white`,
-                        textDecoration: `none`,
-                    }}
-                >
-                    {siteTitle}
-                </Link>
-            </h1>
-        </div>
-    </header>
+import { Container, Grid, Hidden } from '@material-ui/core';
+import { Chat } from '@material-ui/icons';
+import { IconButton, Link } from 'gatsby-theme-material-ui';
+
+import { CtaButton } from '../../styles/components';
+
+const Wrapper = styled(Container)`
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            padding-left: 2rem;
+            list-style-type: none;
+        }
+    }
+`;
+
+const Header = () => (
+    <Wrapper component="header" id="top">
+        <Grid container alignItems="center" justify="space-between">
+            <Grid item>
+                <IconButton to="/">
+                    <Chat />
+                </IconButton>
+            </Grid>
+            <Grid item>
+                <nav>
+                    <ul>
+                        <Hidden xsDown>
+                            <li>
+                                <Link to="#features">Features</Link>
+                            </li>
+                            <li>
+                                <Link to="#how-it-works">How It Works</Link>
+                            </li>
+                            <li>
+                                <Link to="#pricing">Pricing</Link>
+                            </li>
+                        </Hidden>
+                        <li>
+                            <CtaButton
+                                size="small"
+                                style={{ fontSize: '0.8rem' }}
+                            >
+                                Get Started
+                            </CtaButton>
+                        </li>
+                    </ul>
+                </nav>
+            </Grid>
+        </Grid>
+    </Wrapper>
 );
-
-Header.propTypes = {
-    siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-    siteTitle: ``,
-};
 
 export default Header;
