@@ -8,7 +8,7 @@ import voiceicon from '../images/voiceicon.svg';
 import { Section } from '../styles/components';
 
 const CoreFeatures = () => (
-    <Section background="#EFF8FF">
+    <Section background="#EFF8FF" id="features">
         <Box display="flex" justifyContent="center">
             <Typography className="header-label" variant="h2" component="h2">
                 Core Features
